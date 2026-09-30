@@ -1,0 +1,1014 @@
+/* =========================================================
+   HARLLA LIRIEL | SITE PROFISSIONAL
+   Identidade visual:
+   Off-white + Areia + Marrom + Preto
+   ========================================================= */
+
+
+/* =========================================================
+   1. VARIÁVEIS
+   ========================================================= */
+
+:root {
+    --off-white: #F7F3ED;
+    --areia: #D8C7AE;
+    --marrom: #6B4F3A;
+    --marrom-escuro: #493426;
+    --preto: #171513;
+    --branco: #FFFFFF;
+
+    --container: 1200px;
+
+    --transicao: 0.3s ease;
+}
+
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: var(--off-white);
+    color: var(--preto);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =========================================================
+   3. ELEMENTOS GERAIS
+   ========================================================= */
+
+main {
+    overflow: hidden;
+}
+
+.section {
+    width: min(100% - 48px, var(--container));
+    margin: 0 auto;
+    padding: 120px 0;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 60px;
+}
+
+.eyebrow {
+    margin-bottom: 18px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    color: var(--marrom);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
+h2 {
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+    padding: 0 30px;
+
+    background-color: var(--preto);
+    color: var(--branco);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    border: 1px solid var(--preto);
+
+    transition:
+        background-color var(--transicao),
+        color var(--transicao),
+        transform var(--transicao);
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--preto);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   4. HEADER
+   ========================================================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    background-color: rgba(247, 243, 237, 0.92);
+
+    border-bottom: 1px solid rgba(23, 21, 19, 0.08);
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav a {
+    position: relative;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    transition: color var(--transicao);
+}
+
+.nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background-color: var(--marrom);
+
+    transition: width var(--transicao);
+}
+
+.nav a:hover {
+    color: var(--marrom);
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   5. HERO
+   ========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 160px 8% 100px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(247, 243, 237, 0.98) 0%,
+            rgba(247, 243, 237, 0.92) 45%,
+            rgba(216, 199, 174, 0.55) 100%
+        );
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    top: 82px;
+    right: 6%;
+
+    width: 1px;
+    height: 55%;
+
+    background-color: rgba(107, 79, 58, 0.25);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    margin-bottom: 35px;
+
+    font-size: clamp(5rem, 13vw, 11rem);
+    line-height: 0.8;
+    letter-spacing: -0.07em;
+}
+
+.hero-description {
+    max-width: 570px;
+    margin-bottom: 38px;
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+
+    color: #4e4944;
+}
+
+
+/* =========================================================
+   6. SOBRE
+   ========================================================= */
+
+.about {
+    padding-top: 150px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    align-items: center;
+}
+
+.image-placeholder {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--areia);
+
+    color: var(--marrom);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+
+    font-size: 1rem;
+    line-height: 1.9;
+
+    color: #4d4843;
+}
+
+.about-text p:first-child {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 2rem;
+    line-height: 1.2;
+
+    color: var(--preto);
+}
+
+
+/* =========================================================
+   7. PORTFÓLIO
+   ========================================================= */
+
+.portfolio {
+    padding-top: 150px;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 18px;
+}
+
+.gallery-item {
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--areia);
+
+    color: var(--marrom);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+
+    transition:
+        transform var(--transicao),
+        filter var(--transicao);
+}
+
+/*
+   Criamos tamanhos diferentes para dar
+   aparência de galeria editorial.
+*/
+
+.gallery-item:nth-child(1) {
+    grid-column: span 7;
+    min-height: 520px;
+}
+
+.gallery-item:nth-child(2) {
+    grid-column: span 5;
+    min-height: 520px;
+}
+
+.gallery-item:nth-child(3) {
+    grid-column: span 4;
+    min-height: 450px;
+}
+
+.gallery-item:nth-child(4) {
+    grid-column: span 8;
+    min-height: 450px;
+}
+
+.gallery-item:nth-child(5) {
+    grid-column: span 6;
+    min-height: 500px;
+}
+
+.gallery-item:nth-child(6) {
+    grid-column: span 6;
+    min-height: 500px;
+}
+
+.gallery-item:hover {
+    transform: scale(0.99);
+    filter: brightness(0.95);
+}
+
+
+/* =========================================================
+   8. SERVIÇOS
+   ========================================================= */
+
+.services {
+    background-color: var(--areia);
+
+    width: 100%;
+    max-width: none;
+
+    padding-left: max(24px, calc((100% - var(--container)) / 2));
+    padding-right: max(24px, calc((100% - var(--container)) / 2));
+}
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid rgba(23, 21, 19, 0.25);
+}
+
+.service-card {
+    padding: 45px 35px 45px 0;
+
+    border-right: 1px solid rgba(23, 21, 19, 0.25);
+}
+
+.service-card:not(:first-child) {
+    padding-left: 35px;
+}
+
+.service-card:last-child {
+    border-right: 0;
+}
+
+.service-card span {
+    display: block;
+
+    margin-bottom: 60px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+
+    color: var(--marrom);
+}
+
+.service-card h3 {
+    margin-bottom: 20px;
+
+    font-size: 2rem;
+}
+
+.service-card p {
+    max-width: 340px;
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+
+    color: #514941;
+}
+
+
+/* =========================================================
+   9. COMO FUNCIONA
+   ========================================================= */
+
+.process {
+    background-color: var(--off-white);
+}
+
+.process-list {
+    border-top: 1px solid rgba(23, 21, 19, 0.15);
+}
+
+.process-item {
+    display: grid;
+
+    grid-template-columns: 80px 250px 1fr;
+
+    align-items: center;
+
+    padding: 32px 0;
+
+    border-bottom: 1px solid rgba(23, 21, 19, 0.15);
+}
+
+.process-item span {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+
+    color: var(--marrom);
+}
+
+.process-item h3 {
+    font-size: 1.8rem;
+}
+
+.process-item p {
+    color: #5c5650;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   10. DEPOIMENTOS
+   ========================================================= */
+
+.testimonials {
+    background-color: var(--preto);
+
+    color: var(--off-white);
+
+    width: 100%;
+    max-width: none;
+
+    padding-left: max(24px, calc((100% - var(--container)) / 2));
+    padding-right: max(24px, calc((100% - var(--container)) / 2));
+}
+
+.testimonials .eyebrow {
+    color: var(--areia);
+}
+
+.testimonials h2 {
+    max-width: 800px;
+}
+
+blockquote {
+    max-width: 900px;
+
+    margin-top: 80px;
+
+    padding-left: 35px;
+
+    border-left: 1px solid var(--areia);
+
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    line-height: 1.25;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   11. FAQ
+   ========================================================= */
+
+.faq details {
+    border-top: 1px solid rgba(23, 21, 19, 0.2);
+
+    padding: 25px 0;
+}
+
+.faq details:last-child {
+    border-bottom: 1px solid rgba(23, 21, 19, 0.2);
+}
+
+.faq summary {
+    cursor: pointer;
+
+    list-style: none;
+
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: "+";
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.faq details[open] summary::after {
+    content: "−";
+}
+
+.faq details p {
+    max-width: 700px;
+
+    margin-top: 20px;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+
+    color: #5a544e;
+}
+
+
+/* =========================================================
+   12. CONTATO
+   ========================================================= */
+
+.contact {
+    padding: 150px 24px;
+
+    text-align: center;
+
+    background-color: var(--marrom);
+
+    color: var(--off-white);
+}
+
+.contact .eyebrow {
+    color: var(--areia);
+}
+
+.contact h2 {
+    margin-bottom: 45px;
+
+    font-size: clamp(3.5rem, 8vw, 7rem);
+}
+
+.button-light {
+    background-color: var(--off-white);
+    color: var(--preto);
+
+    border-color: var(--off-white);
+}
+
+.button-light:hover {
+    background-color: transparent;
+    color: var(--off-white);
+}
+
+
+/* =========================================================
+   13. FOOTER
+   ========================================================= */
+
+.footer {
+    padding: 45px 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--preto);
+
+    color: var(--off-white);
+}
+
+.footer strong {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+}
+
+.footer p {
+    font-size: 0.75rem;
+
+    color: #aaa39b;
+}
+
+
+/* =========================================================
+   14. RESPONSIVIDADE
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 24px;
+    }
+
+    .nav {
+        gap: 18px;
+    }
+
+    .nav a {
+        font-size: 0.65rem;
+    }
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .image-placeholder {
+        min-height: 500px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 35px 0;
+
+        border-right: 0;
+
+        border-bottom: 1px solid rgba(23, 21, 19, 0.25);
+    }
+
+    .service-card:not(:first-child) {
+        padding-left: 0;
+    }
+
+    .service-card:last-child {
+        border-bottom: 0;
+    }
+
+    .process-item {
+        grid-template-columns: 60px 180px 1fr;
+    }
+}
+
+
+/* =========================================================
+   15. RESPONSIVIDADE
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .section {
+        width: min(100% - 36px, var(--container));
+
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        height: 70px;
+
+        padding: 0 18px;
+    }
+
+    .logo {
+        font-size: 0.7rem;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding: 20px 24px;
+
+        background-color: var(--off-white);
+
+        border-bottom: 1px solid rgba(23, 21, 19, 0.1);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        width: 100%;
+
+        padding: 15px 0;
+
+        font-size: 0.7rem;
+    }
+
+    .nav a::after {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+
+        padding: 130px 24px 80px;
+
+        align-items: flex-end;
+    }
+
+    .hero::before {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: clamp(4.5rem, 23vw, 8rem);
+
+        margin-bottom: 30px;
+    }
+
+    .hero-description {
+        font-size: 0.92rem;
+
+        max-width: 100%;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+
+    /* SOBRE */
+
+    .about {
+        padding-top: 90px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: clamp(2.4rem, 12vw, 4rem);
+    }
+
+    .image-placeholder {
+        min-height: 420px;
+    }
+
+    .about-text p:first-child {
+        font-size: 1.7rem;
+    }
+
+
+    /* PORTFÓLIO */
+
+    .gallery {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .gallery-item,
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6) {
+        grid-column: span 1;
+
+        min-height: 430px;
+    }
+
+
+    /* SERVIÇOS */
+
+    .services {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .service-card {
+        padding: 35px 0;
+    }
+
+    .service-card span {
+        margin-bottom: 35px;
+    }
+
+    .service-card h3 {
+        font-size: 1.7rem;
+    }
+
+
+    /* PROCESSO */
+
+    .process-item {
+        display: block;
+
+        padding: 30px 0;
+    }
+
+    .process-item span {
+        display: block;
+
+        margin-bottom: 15px;
+    }
+
+    .process-item h3 {
+        margin-bottom: 10px;
+
+        font-size: 1.6rem;
+    }
+
+
+    /* DEPOIMENTOS */
+
+    .testimonials {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    blockquote {
+        margin-top: 50px;
+
+        padding-left: 20px;
+
+        font-size: 1.8rem;
+    }
+
+
+    /* FAQ */
+
+    .faq summary {
+        font-size: 1rem;
+
+        gap: 20px;
+    }
+
+
+    /* CONTATO */
+
+    .contact {
+        padding: 100px 24px;
+    }
+
+    .contact h2 {
+        font-size: clamp(3.2rem, 15vw, 5rem);
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+
+        padding: 35px 24px;
+    }
+
+}
+
+
+/* =========================================================
+   16. CELULARES MUITO PEQUENOS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 4.3rem;
+    }
+
+    .image-placeholder {
+        min-height: 350px;
+    }
+
+    .gallery-item,
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(5),
+    .gallery-item:nth-child(6) {
+        min-height: 350px;
+    }
+
+}
